@@ -1,4 +1,4 @@
-package com.vp.func.programming;
+package com.vp.func.programming.imperative_declarative;
 
 public class Student {
     private int id;

@@ -1,4 +1,6 @@
-package com.vp.func.programming;
+package com.vp.func.programming.imperative_declarative;
+
+import com.vp.func.programming.imperative_declarative.Student;
 
 import java.util.ArrayList;
 import java.util.List;
