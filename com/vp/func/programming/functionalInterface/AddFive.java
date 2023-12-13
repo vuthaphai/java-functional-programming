@@ -1,5 +1,5 @@
 package com.vp.func.programming.functionalInterface;
 
-public interface AddNumber {
+public interface AddFive {
     int add(int number);
 }
