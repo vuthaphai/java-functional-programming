@@ -16,12 +16,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age=" + age +
-                '}';
+//        return "Student{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", gender='" + gender + '\'' +
+//                ", age=" + age +
+//                '}';
+        return name + ", " + age;
     }
 
     public int getId() {
