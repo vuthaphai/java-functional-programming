@@ -39,6 +39,14 @@ public class StudentAppDemo {
                 .collect(Collectors.groupingBy(p -> p.getAge(), Collectors.counting()));
         System.out.println(mapGroupByAgeCount);
 
+        // group student who can vote and cannot vote
+
+        Map<Boolean, List<Student>> map = students.stream()
+                .collect(Collectors.partitioningBy(st -> st.getAge() > 17));
+        System.out.println(map);
+
+
+
 
 
 

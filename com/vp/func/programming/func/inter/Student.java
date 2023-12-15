@@ -22,7 +22,7 @@ public class Student {
 //                ", gender='" + gender + '\'' +
 //                ", age=" + age +
 //                '}';
-        return getName();
+        return name + ", " + age;
     }
 
     public int getId() {
