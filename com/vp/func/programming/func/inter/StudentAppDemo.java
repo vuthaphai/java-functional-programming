@@ -3,6 +3,8 @@ package com.vp.func.programming.func.inter;
 import com.vp.func.programming.imperative_declarative.Student;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StudentAppDemo {
 
@@ -18,12 +20,24 @@ public class StudentAppDemo {
             new Student(9,"Mada","M", 20)
     );
     public static void main(String[] args) {
-         students.stream()
+         /*students.stream()
                  .filter(st -> st.getGender() == "F")
                  .limit(3)
+                 .forEach(System.out::println);*/
 
-                 .forEach(System.out::println);
+        /*Map<String, List<Student>> mapGroupByGender = students.stream()
+                .collect(Collectors.groupingBy(p -> p.getGender()));
+                 System.out.println(mapGroupByGender);
+                 */
 
+        Map<Integer, List<Student>> mapGroupByAge = students.stream()
+                .collect(Collectors.groupingBy(p -> p.getAge()));
+
+        System.out.println(mapGroupByAge);
+
+        Map<Integer, Long> mapGroupByAgeCount = students.stream()
+                .collect(Collectors.groupingBy(p -> p.getAge(), Collectors.counting()));
+        System.out.println(mapGroupByAgeCount);
 
 
 
