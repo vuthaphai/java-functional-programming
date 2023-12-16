@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamApiDemo3 {
     public static void main(String[] args) {
@@ -14,8 +15,15 @@ public class StreamApiDemo3 {
 
         List<String> names = List.of("Vutha Phai","Vutha Phai", "Sovan Dawin Heng","Sovan Dawin Heng", "Seyma", "Sokcheng", "Dany", "Seyha"); // Stream source
 
-        Map<String, Long> mapListString = names.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> mapListString = names.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
         System.out.println(mapListString);
+
+
+        Stream<Map.Entry<String, Long>> entryStream = mapListString.entrySet().stream()
+                .filter(a -> a.getValue() >= 2);
+        System.out.println(entryStream.collect(Collectors.toList()));
 
 
     }
